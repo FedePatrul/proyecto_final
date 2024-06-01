@@ -1,0 +1,59 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}
+    Fedrigoni
+{% endblock title %}
+
+{% block style %}
+<style>
+    .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+    .btn-primary a, .btn-secondary a {
+        color: white;
+        text-decoration: none;
+    }
+    .btn-primary a:hover, .btn-secondary a:hover {
+        text-decoration: none;
+        color: white;
+    }
+    .section-title {
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock style %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="text-center">
+        <h1 class="mb-4 text-primary">AUTOADHESIVOS FEDRIGONI</h1>
+    </div>
+    <p class="lead">Es uno de los principales actores internacionales en la producción de materiales autoadhesivos: papeles y films autoadhesivos en hoja y bobina para múltiples sectores, para comunicación visual y soluciones a medida.</p>
+    
+    <div class="text-center mb-4">
+        <img height="400" width="400"  src="{% static 'fedrigoni/img/fedrigoni.png' %}" alt="Autoadhesivos Fedrigoni" class="img-fluid rounded">
+    </div>
+    
+    <div class="section-title">
+        <h3>¿QUÉ HAY DETRÁS DE UNA ETIQUETA?</h3>
+    </div>
+    <p>Las etiquetas están presentes en casi todas partes y Fedrigoni está detrás de la producción de material autoadhesivo. Fedrigoni Autoadhesivos nació de la unión de Ritrama, Arconvert, Manter, excelencias de este sector: combinando diseño y tecnología ayudan a llevar la innovación a tus proyectos. Con presencia en (casi) todos los mercados, desde las etiquetas alimentarias hasta las del sector farmacéutico, desde el mundo de la comunicación visual, hasta proyectos totalmente personalizados.</p>
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="display-4 font-weight-bold text-primary">Encuentre su etiqueta ideal aquí</h2>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <a href="{% url 'fedrigoni:list_pdfs' %}" class="btn btn-primary btn-lg px-5 py-3 shadow-lg">
+                    <i class="fas fa-file-alt"></i> Fichas Técnicas
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

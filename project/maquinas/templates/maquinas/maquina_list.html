@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+{% block title %}
+    Lista de Maquinas
+{% endblock title %}
+{% block content %}
+<div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="mb-0">Lista de máquinas</h1>
+        <button class="btn btn-primary me-2">
+            <a href="{% url 'maquinas:create' %}" class="text-white text-decoration-none">Crear maquina nueva</a>
+        </button>
+    </div>
+    <div class="list-group">
+        {% for object in object_list %}
+            <div class="list-group-item d-flex justify-content-between align-items-center">
+                <h3 class="h5 mb-1">{{ object.nombre }}</h3>
+                <div class="btn-group">
+                    <a href="{% url 'maquinas:detail' object.id %}" class="btn btn-primary me-2 rounded">Detalle</a>
+                    <div class="btn-group">
+                        <button type="button"
+                                class="btn btn-success dropdown-toggle rounded"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">Solo administrador</button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="{% url 'maquinas:update' object.id %}">Editar</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'maquinas:delete' object.id %}">Eliminar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <a href="{% url 'maquinas:index' %}" class="btn btn-primary btn-lg">Volver</a>
+</div>
+{% endblock content %}
+

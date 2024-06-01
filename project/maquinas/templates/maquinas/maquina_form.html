@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Crear Maquina
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    {% if form.instance.id %}
+        <h1 class="mb-4">Editar Maquina</h1>
+    {% else %}
+        <h1 class="mb-4">Crear Maquina Nueva</h1>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                {{ form.as_table }}
+            </table>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Guardar</button>
+        <a href="{% url 'maquinas:list' %}" class="btn btn-danger mt-3">Cancelar</a>
+    </form>
+</div>
+
+{% endblock content %}

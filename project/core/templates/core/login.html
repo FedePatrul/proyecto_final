@@ -1,0 +1,50 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Iniciar sesion
+{% endblock title %}
+
+{% block style %}
+<style>
+    body {
+        overflow-y: hidden;
+    }
+    .content-container {
+        overflow-y: auto; 
+        height: calc(100vh - 100px); 
+    }
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .form-box {
+        width: 100%;
+        max-width: 400px;
+    }
+    .btn-group {
+        display: flex;
+        gap: 10px;
+    }
+</style>
+{% endblock style %}
+
+{% block content %}
+<div class="container form-container">
+    <div class="form-box">
+        <form method="post" class="needs-validation" novalidate>
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.as_p }}
+            </div>
+            <input type="hidden" name="next" value="{% url 'core:index' %}">
+            <div class="btn-group">
+                <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+                <a href="{% url 'core:index' %}" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}

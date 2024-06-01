@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}
+    Quienes Somos
+{% endblock title %}
+{% block content %}
+    <div class="container my-5">
+        <div class="text-center">
+            <h1 class="display-4">FS Print & Projects Distribuidor Oficial HP Indigo</h1>
+            <p class="lead">en Argentina, Uruguay y Paraguay</p>
+        </div>
+        <p class="mt-4">
+            Desde su introducción en el mercado, FS Print & Projects es el canal de distribución oficial para Argentina, Uruguay y Paraguay del líder en offset digital: HP Indigo. La marca presenta un amplio portfolio de prensas comerciales dentro de tres líneas base: impresión por pliego, bobina y para etiquetas y embalaje. Las prensas HP Indigo permiten, a través de una amplia gama de tintas especiales y efectos, convertir casi cualquier idea en realidad. La tecnología HP Indigo representa offset digital, con una calidad de impresión máxima.
+        </p>
+        <div class="mt-5">
+            <h2 class="text-primary">Servicios</h2>
+            <p>
+                Asesoramos a nuestros clientes y les brindamos la solución tecnológica adecuada a sus mercados, expectativas y posibilidades. Como importadores directos tenemos para ofrecerte no sólo variedad de productos, sino el precio más conveniente, stock, financiación y cobertura en Argentina, Uruguay y Paraguay.
+            </p>
+            <p>
+                Capacitamos constantemente a nuestro servicio técnico para brindar la mejor asistencia a los clientes. Nuestro amplio stock de repuestos, en combinación con nuestro departamento de comercio exterior, permiten responder rápidamente ante cualquier necesidad.
+            </p>
+            <button><a href="{% url 'core:index' %}">Volver</a></button>
+        </div>
+        <div class="text-center my-5">
+            <img width="280" height="280" 
+                src="{% static 'core/img/download.jpg' %}"
+                 alt="Imagen descriptiva"
+                 class="img-fluid">
+        </div>
+    </div>
+{% endblock content %}

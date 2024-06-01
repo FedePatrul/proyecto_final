@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Cerrar sesion
+{% endblock title %}
+
+{% block content %}
+    <div class="container text-center mt-5">
+        <p class="lead">Sesión Cerrada</p>
+        <a href="{% url 'core:index' %}" class="btn btn-primary">Inicio</a>
+    </div>
+{% endblock content %}

@@ -1,0 +1,77 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+    HP Inidgo
+{% endblock title %}
+
+{% block style %}
+<style>
+    .bg-lightblue {
+        background-color: #e0f7fa;
+    }
+    .card-title {
+        color: #007bff;
+    }
+    .btn-primary a {
+        color: white;
+        text-decoration: none;
+    }
+    .btn-primary a:hover {
+        text-decoration: none;
+        color: white;
+    }
+</style>
+{% endblock style %}
+
+{% block content %}
+
+<div class="container my-5">
+    <div class="text-center">
+        <h1 class="display-4 text-primary">PRENSAS DIGITALES HP INDIGO. ADELÁNTESE AL FUTURO</h1>
+    </div>
+    <p class="mt-4">Desde su introducción en el mercado, somos partner del líder en offset digital: HP Indigo. La marca presenta un amplio portfolio de prensas comerciales dentro de tres líneas base: impresión por pliego, bobina y para etiquetas y embalaje.</p>
+    <p>Las prensas HP Indigo permiten, a través de una amplia gama de tintas especiales y efectos, convertir casi cualquier idea en realidad. La tecnología HP Indigo representa offset digital, con una calidad de impresión máxima.</p>
+    
+    <div class="mt-5">
+        <h3 class="text-primary">UN MUNDO DE APLICACIONES</h3>
+        <p>Impresión comercial, fotografía, sector industrial, decoración, etiquetas, estuches de cartón microcorrugado, embalajes flexibles, fundas termocontraíbles y más!</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card mb-4 bg-lightblue">
+                <div class="card-body">
+                    <h2 class="card-title h4">Etiquetas</h2>
+                    <p class="card-text">Dinamice su negocio con una tecnología que transforma el sector. Produzca prácticamente cualquier tipo de etiqueta y embalaje, desde etiquetas autoadhesivas hasta sleeves, etiquetas en molde (IML, por sus siglas en inglés), envolturas y embalaje flexible: todo con calidad de huecograbado.</p>
+                </div>
+            </div>
+            <div class="card mb-4 bg-lightblue">
+                <div class="card-body">
+                    <h2 class="card-title h4">Envases Flexibles</h2>
+                    <p class="card-text">Dinamice su empresa en el mercado de embalaje flexible digital que ofrece un elevado margen y rápido crecimiento con bolsas retortables, cajas tipo almohada, bolsitas y embalajes según demanda. Evite los costos de preparación de trabajos de todo tipo de tamaño, manteniendo el cumplimiento del embalaje de alimentos y ofreciendo un embalaje inteligente con elementos de protección de marca, datos variables y diseños únicos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card mb-4 bg-lightblue">
+                <div class="card-body">
+                    <h2 class="card-title h4">Cajas y Estuches</h2>
+                    <p class="card-text">Aproveche la oportunidad de obtener márgenes de dos dígitos y únase a los fabricantes de embalaje visionarios que remodelan el sector de cajas y estuches con aplicaciones de gran valor como los revestimientos de cajas rígidas, y embalaje inteligente con soluciones de protección de marca multicapa para satisfacer los requisitos de las marcas de primera calidad.</p>
+                </div>
+            </div>
+            <div class="card mb-4 bg-lightblue">
+                <div class="card-body">
+                    <h2 class="card-title h4">Impresión Comercial General</h2>
+                    <p class="card-text">Las prensas digitales ya no se limitan a tiradas cortas. Las tiradas más largas pueden aprovechar la flexibilidad digital de forma que resulte rentable. Ha llegado el momento de obtener mejores resultados en un mercado en auge con nuevas y rentables formas de crecimiento.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center mt-5">
+        <h1 class="mb-3">Conozca nuestras prensas digitales aquí</h1>
+        <a href="{% url 'maquinas:list' %}" class="btn btn-primary btn-lg">Prensas digitales</a>
+    </div>
+</div>
+{% endblock content %}

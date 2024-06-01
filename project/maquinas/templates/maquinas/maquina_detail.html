@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Detalle de maquina
+{% endblock title %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <h1 class="mb-4 text-center">Detalle de máquina</h1>
+    <div class="card shadow-sm">
+        <div class="card-header">
+            <h2 class="card-title mb-0">{{ object.nombre }}</h2>
+        </div>
+        <div class="card-body">
+            <h3 class="card-subtitle mb-2 text-muted">{{ object.titulo }}</h3>
+            <p class="card-text">{{ object.descripcion }}</p>
+            <a href="{{ object.pdf }}" class="btn btn-primary" target="_blank">Ver Ficha Tecnica</a>
+        </div>
+    </div>
+    <div class="mt-3 text-center">
+        <a href="{% url 'maquinas:list' %}" class="btn btn-secondary">Volver</a>
+    </div>
+</div>
+{% endblock content %}
