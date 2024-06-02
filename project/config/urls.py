@@ -24,5 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("core.urls")),
     path("hp-indigo/", include("maquinas.urls")),
-    path("fedrigoni/", include("fedrigoni.urls"))
+    path("fedrigoni/", include("fedrigoni.urls")),
+    path("clientes/", include("clientes.urls"))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
