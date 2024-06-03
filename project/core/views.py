@@ -23,3 +23,6 @@ def register(request):
 
 def quienes_somos(request):
     return render(request,"core/quienes_somos.html")
+
+def sobre_mi(request):
+    return render(request,"core/sobre_mi.html")
