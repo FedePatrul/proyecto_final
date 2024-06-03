@@ -4,4 +4,4 @@ from . import models
 class MaquinaForm(forms.ModelForm):
     class Meta:
         model = models.Cliente
-        fields = ["nombre", "apellido", "email", "fecha_de_nacimiento", "mensaje"]
+        fields = ["nombre", "apellido", "email", "telefono", "fecha_de_nacimiento", "mensaje"]
